@@ -33,7 +33,9 @@ x, y = clean_data(ds)
 
 # TODO: Split data into train and test sets.
 
-### YOUR CODE HERE ###a
+### YOUR CODE HERE ###
+
+train_x
 
 run = Run.get_context()
 
