@@ -14,19 +14,17 @@ from azureml.data.dataset_factory import TabularDatasetFactory
 # Data is located at:
 # "https://automlsamplenotebookdata.blob.core.windows.net/automl-sample-notebook-data/bankmarketing_train.csv"
 
+url_paths = [
+            'https://automlsamplenotebookdata.blob.core.windows.net/automl-sample-notebook-data/bankmarketing_train.csv'
+            ]
+''' 
+from azureml.core import Dataset
+dataset = Dataset.Tabular.from_delimited_files(path = [(datastore, 'https://automlsamplenotebookdata.blob.core.windows.net/automl-sample-notebook-data/bankmarketing_train.csv')])
+'''
 
-#TabularDatasetFactory.File.from_files(path=url_paths)
-
-ds = ### YOUR CODE HERE ###
-
+ds = TabularDatasetFactory.File.from_files(path=url_paths)
 '''
 from azureml.core.dataset import Dataset
-url_paths = [
-            'http://yann.lecun.com/exdb/mnist/train-images-idx3-ubyte.gz',
-            'http://yann.lecun.com/exdb/mnist/train-labels-idx1-ubyte.gz',
-            'http://yann.lecun.com/exdb/mnist/t10k-images-idx3-ubyte.gz',
-            'http://yann.lecun.com/exdb/mnist/t10k-labels-idx1-ubyte.gz'
-            ]
 dataset = Dataset.File.from_files(path=url_paths)
 df = dataset.to_pandas_dataframe()
 '''
