@@ -9,6 +9,7 @@ from sklearn.preprocessing import OneHotEncoder
 import pandas as pd
 from azureml.core.run import Run
 from azureml.data.dataset_factory import TabularDatasetFactory
+#from azureml.core import Dataset
 
 # TODO: Create TabularDataset using TabularDatasetFactory
 # Data is located at:
@@ -18,11 +19,11 @@ url_paths = [
             'https://automlsamplenotebookdata.blob.core.windows.net/automl-sample-notebook-data/bankmarketing_train.csv'
             ]
 ''' 
-from azureml.core import Dataset
-dataset = Dataset.Tabular.from_delimited_files(path = [(datastore, 'https://automlsamplenotebookdata.blob.core.windows.net/automl-sample-notebook-data/bankmarketing_train.csv')])
+dataset = Dataset.Tabular.from_delimited_files(path=url_paths)
 '''
 
 ds = TabularDatasetFactory.File.from_files(path=url_paths)
+print(ds.to_pandas_dataframe())
 '''
 from azureml.core.dataset import Dataset
 dataset = Dataset.File.from_files(path=url_paths)
