@@ -36,7 +36,7 @@ x, y = clean_data(ds)
 
 ### YOUR CODE HERE ###
 
-train_x
+train_x, train_y, test_x, test_y = train_test_split(x,y,train_size=0.80,test_size=0.20,random_stage=123)
 
 run = Run.get_context()
 
