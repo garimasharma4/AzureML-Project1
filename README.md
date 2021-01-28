@@ -13,6 +13,9 @@ For this project, we were provided a Bank's Marketing data. Based on my research
 **In 1-2 sentences, explain the solution: e.g. "The best performing model was a ..."**
 
 ## Scikit-learn Pipeline
+
+
+
 **Explain the pipeline architecture, including data, hyperparameter tuning, and classification algorithm.**
 
 **What are the benefits of the parameter sampler you chose?**
