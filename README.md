@@ -14,7 +14,7 @@ For this project, we were provided a Bank's Marketing data. Based on my research
 
 ## Scikit-learn Pipeline
 
-![alt text](https://github.com/garimasharma4/AzureML/blob/master/Architecture.png?raw=true)
+![alt text](https://github.com/garimasharma4/AzureML/blob/master/Architecture.png?raw=false)
 
 **Explain the pipeline architecture, including data, hyperparameter tuning, and classification algorithm.**
 
