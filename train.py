@@ -22,14 +22,9 @@ url_paths = [
 dataset = Dataset.Tabular.from_delimited_files(path=url_paths)
 '''
 
-ds = TabularDatasetFactory.File.from_files(path=url_paths)
+ds = TabularDatasetFactory.from_delimited_files(path=url_paths)
 print(ds.to_pandas_dataframe())
-'''
-from azureml.core.dataset import Dataset
-dataset = Dataset.File.from_files(path=url_paths)
-df = dataset.to_pandas_dataframe()
-'''
-return x_df, y_df
+
 x, y = clean_data(ds)
 
 # TODO: Split data into train and test sets.
@@ -66,6 +61,7 @@ def clean_data(data):
 
     y_df = x_df.pop("y").apply(lambda s: 1 if s == "yes" else 0)
     
+    return x_df, y_df
 
 def main():
     # Add arguments to script
