@@ -29,14 +29,14 @@ from azureml.core.dataset import Dataset
 dataset = Dataset.File.from_files(path=url_paths)
 df = dataset.to_pandas_dataframe()
 '''
-
+return x_df, y_df
 x, y = clean_data(ds)
 
 # TODO: Split data into train and test sets.
 
 ### YOUR CODE HERE ###
 
-train_x, train_y, test_x, test_y = train_test_split(x,y,train_size=0.80,test_size=0.20,random_stage=123)
+train_x, test_x, train_y, test_y = train_test_split(x,y,train_size=0.80,test_size=0.20,random_stage=123)
 
 run = Run.get_context()
 
@@ -86,5 +86,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-
-### return x_df, y_df ###
