@@ -1,3 +1,4 @@
+
 from sklearn.linear_model import LogisticRegression
 import argparse
 import os
@@ -73,6 +74,9 @@ def main():
 
     accuracy = model.score(x_test, y_test)
     run.log("Accuracy", np.float(accuracy))
+
+    # Register the hyperdrive model
+    joblib.dump(model, 'outputs/hyperdrive_best_model.joblib')
 
 if __name__ == '__main__':
     main()
