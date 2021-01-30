@@ -9,7 +9,6 @@ from sklearn.preprocessing import OneHotEncoder
 import pandas as pd
 from azureml.core.run import Run
 from azureml.data.dataset_factory import TabularDatasetFactory
-#from azureml.core import Dataset
 
 def clean_data(data):
     # Dict for cleaning data
@@ -43,12 +42,7 @@ def clean_data(data):
 # Data is located at:
 # "https://automlsamplenotebookdata.blob.core.windows.net/automl-sample-notebook-data/bankmarketing_train.csv"
 
-url_paths = [
-            'https://automlsamplenotebookdata.blob.core.windows.net/automl-sample-notebook-data/bankmarketing_train.csv'
-            ]
-''' 
-dataset = Dataset.Tabular.from_delimited_files(path=url_paths)
-'''
+url_paths = ['https://automlsamplenotebookdata.blob.core.windows.net/automl-sample-notebook-data/bankmarketing_train.csv']
 
 ds = TabularDatasetFactory.from_delimited_files(path=url_paths)
 print(ds.to_pandas_dataframe())
@@ -59,7 +53,7 @@ x, y = clean_data(ds)
 
 ### YOUR CODE HERE ###
 
-train_x, test_x, train_y, test_y = train_test_split(x,y,train_size=0.80,test_size=0.20,random_stage=123)
+x_train, x_test, y_train, y_test = train_test_split(x,y,train_size=0.80,test_size=0.20,random_state=123)
 
 run = Run.get_context()
 
