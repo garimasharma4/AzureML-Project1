@@ -18,7 +18,11 @@ For this project, we were provided a Bank's Marketing data. Based on my research
 
 **Explain the pipeline architecture, including data, hyperparameter tuning, and classification algorithm.**
 
+Hyperparameter tuning along with AutoML can help dramatically speed up the development of models in MS Azure ML. Hyperparameters are adjustable parameters that we choose for model training and hyperparameter tuning is finding the best set of parameters to train a model. With the help of packages such as HyperDrive we can automate hyperparameter tuning.
+
 **What are the benefits of the parameter sampler you chose?**
+
+For this project, we used RandomSampler as the hyperparameter. RandomSample is (define it here). The benefits of RandomSampler are:
 
 **What are the benefits of the early stopping policy you chose?**
 
