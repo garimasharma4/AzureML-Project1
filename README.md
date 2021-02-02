@@ -14,15 +14,29 @@ For this project, we were provided a Bank's Marketing data. Based on my research
 
 ## Scikit-learn Pipeline
 
+### Scikit-learn pipeline architecture
+
 ![alt text](https://github.com/garimasharma4/AzureML/blob/master/Architecture.png?raw=false)
 
 **Explain the pipeline architecture, including data, hyperparameter tuning, and classification algorithm.**
+### Data
 
+### Hyperparameter tuning
 Hyperparameter tuning along with AutoML can help dramatically speed up the development of models in MS Azure ML. Hyperparameters are adjustable parameters that we choose for model training and hyperparameter tuning is finding the best set of parameters to train a model. With the help of packages such as HyperDrive we can automate hyperparameter tuning.
+
+### Classification algorithm
 
 **What are the benefits of the parameter sampler you chose?**
 
-For this project, we used RandomSampler as the hyperparameter. RandomSample is (define it here). The benefits of RandomSampler are:
+MS Azure ML supports the following sampling methods:
+1. Random sampling
+2. Grid sampling
+3. Bayesian sampling
+
+For this project, we used random sampling over the hyperparameter space. In random sampling, hyperparamter values are randomly selected from the defined search space. The benefits of random sampling are:
+1. It supports discrete and continuous hyperparameters.
+2. It supports early termination of low-performance runs.
+3. 
 
 **What are the benefits of the early stopping policy you chose?**
 
