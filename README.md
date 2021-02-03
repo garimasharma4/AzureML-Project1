@@ -25,7 +25,6 @@ Out of the above two approaches, approach #2 (the AutoML run) helped find the be
 
 ![alt text](https://github.com/garimasharma4/AzureML/blob/master/Architecture%20Diagram%20Project%201.png?raw=false)
 
-**Explain the pipeline architecture, including data, hyperparameter tuning, and classification algorithm.**
 ### Data
 
 ### Hyperparameter tuning
