@@ -17,7 +17,7 @@ Two approaches were taken to solve this binary classification problem:
 1. Custom-coded standard scikit-learn regression model. It's hyperparamters were optimised using the MS Azure ML HyperDrive.
 2. Build and optimise the best performing model using AutoML.
 
-Out of the above two approaches, approach #2 (the AutoML run) helped find the best performing model that is the Voting Ensemble. It had an accuracy of 0.9168. The accuracy of the scikit-learn regression model from the first approach was 0.9118.
+Out of the above two approaches, approach #2 (the AutoML run) helped find the best performing model that is the Voting Ensemble. It had an accuracy of 0.9168. The accuracy of the scikit-learn regression model from the first approach was 0.9121.
 
 ## Scikit-learn Pipeline
 
@@ -70,11 +70,12 @@ min_impurity_split=None
 6.  weights=0.1, 0.4, 0.1, 0.1, 0.2, 0.1
 
 ## Pipeline comparison
-In this project, it was the scikit-learn logistic regression model versus the AutoML. While the second approach gave us the best performing model after considering multiple models (VotingEnsemble accuracy .9168), with the first one, we were working with only one model, i.e. scikit-learn logistic regression model. For that, we could only optimise it’s hyperparameters and thus not able to improve it’s accuracy more than .9118. In my opinion, AutoML offers more flexibility to choose from a vast list of algorithms.
+In this project, it was the scikit-learn logistic regression model versus the AutoML. While the second approach gave us the best performing model after considering multiple models (VotingEnsemble accuracy .9168), with the first one, we were working with only one model, i.e. scikit-learn logistic regression model. For that, we could only optimise it’s hyperparameters and thus not able to improve it’s accuracy more than .9121. In my opinion, AutoML offers more flexibility to choose from a vast list of algorithms.
 
 ## Future work
-**What are some areas of improvement for future experiments? Why might these improvements help the model?**
+1. The foremost improvement that can be done is the explanatory data analysis (EDA) part. The given dataset is imbalanced. So, it can be cleaned to improve the data quality.
+2. For HyperDrive, we can increase the search space for the hyperparameters and the number of runs.
+3. Also, the HyperDrive option can be attempted using another alogrithm.
 
 ## Proof of cluster clean up
-**If you did not delete your compute cluster in the code, please complete this section. Otherwise, delete this section.**
-**Image of cluster marked for deletion**
+**I deleted the compute cluster in the code.**
